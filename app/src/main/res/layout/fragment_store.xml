@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/shop_constraint"
+    android:paddingHorizontal="20dp"
+    tools:context="StoreFragment"
+    >
+
+    <SearchView
+        android:id="@+id/shop_dudSearchbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:queryHint="Search"
+        android:background="@drawable/bg_search_barrier"
+        app:layout_constraintBottom_toTopOf="@+id/shop_oilJorker"
+        app:layout_constraintEnd_toEndOf="@+id/shop_tagText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shop_searchIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shop_search_btn"
+        app:layout_constraintTop_toTopOf="@id/shop_dudSearchbar"
+        app:layout_constraintBottom_toBottomOf="@id/shop_dudSearchbar"
+        app:layout_constraintStart_toEndOf="@id/shop_dudSearchbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shop_oilJorker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/shop_tagText1"
+        app:layout_constraintEnd_toEndOf="@+id/shop_itemText"
+
+        app:layout_constraintStart_toStartOf="@+id/shop_itemText"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize"
+        app:srcCompat="@drawable/cool_oil_for_jorker" />
+
+    <TextView
+        android:id="@+id/shop_tagText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_corner_bg"
+        android:padding="7dp"
+        android:text="official product"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/shop_itemText"
+        app:layout_constraintStart_toStartOf="@id/shop_itemText" />
+
+    <TextView
+        android:id="@+id/shop_tagText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_corner_bg_alt"
+        android:padding="7dp"
+        android:text="free delivery"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/shop_itemText"
+        app:layout_constraintStart_toEndOf="@id/shop_tagText1"
+        app:layout_constraintTop_toTopOf="@+id/shop_tagText1" />
+
+
+    <TextView
+        android:id="@+id/shop_itemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="good natural oil for jorking the peantus :)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shop_newPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="900$"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/shop_itemText"
+        app:layout_constraintTop_toBottomOf="@+id/shop_itemText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/temp_string"
+        android:textColor="#9D9D9D"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/shop_newPrice"
+        app:layout_constraintTop_toBottomOf="@id/shop_itemText"
+        app:layout_constraintTop_toTopOf="@id/shop_newPrice" />
+
+    <TextView
+        android:id="@+id/shop_textList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner_bg_faded"
+        android:padding="10dp"
+        android:text="pontis"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/shop_itemText"
+        app:layout_constraintStart_toStartOf="@+id/shop_itemText"
+        app:layout_constraintTop_toBottomOf="@id/shop_newPrice" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="7dp"
+
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/shop_textList"
+        app:layout_constraintStart_toStartOf="@+id/shop_textList"
+        app:layout_constraintTop_toBottomOf="@id/shop_textList">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/shop_textList_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/cart_back_arrow"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="Various oiling options" />
+
+            <TextView
+                android:id="@+id/shop_textList_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/cart_back_arrow"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="Monthly raining" />
+
+            <TextView
+                android:id="@+id/shop_textList_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/cart_back_arrow"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="Jumia bday" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shop_addCartBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_bg_btn"
+        android:gravity="center"
+        android:text="add to cart"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_callIcon"
+        app:layout_constraintEnd_toStartOf="@+id/shop_callIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shop_callIcon" />
+
+    <ImageView
+        android:id="@+id/shop_callIcon"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shop_call_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_homeIcon"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/shop_homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/shop_homeIcon" />
+
+    <ImageView
+        android:id="@+id/shop_homeIcon"
+        android:layout_margin="15dp"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shop_homeicon_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
